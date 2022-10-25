@@ -1,21 +1,20 @@
 <?php
 
-function bubbleSort($inputArr, $length)
+function bubbleSortUsingRecursion(&$inputArr, $size)
 {
-    if ($length == 1) {
+    if ($size == 1) {
         return;
     }
-    for ($i = 0; $i < $length - 1; $i++) {
+    for ($i = 0; $i < $size - 1; $i++) {
         if ($inputArr[$i] > $inputArr[$i + 1]) {
             $temp = $inputArr[$i];
             $inputArr[$i] = $inputArr[$i + 1];
             $inputArr[$i + 1] = $temp;
         }
     }
-    bubbleSort($inputArr, $length - 1);
-    return $inputArr;
+    bubbleSortUsingRecursion($inputArr, $size - 1);
 }
-
-$inputArr = [1, 2, 7, 6, 6, 9, 12];
-$length = count($inputArr);
-print_r(bubbleSort($inputArr, $length));
+$inputArr = [1, 5, 6, 8, 2, 3, 4, 9, 0, 5, 6, 6];
+$size = count($inputArr);
+bubbleSortUsingRecursion($inputArr, $size);
+print_r($inputArr);

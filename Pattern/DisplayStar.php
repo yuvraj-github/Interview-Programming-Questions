@@ -6,11 +6,14 @@
     * * * * 
     * * * * * 
 -->
-<?php 
+<?php
 
-for($i=1; $i<=5; $i++) {
-	for($j=0; $j<$i; $j++) {
-		echo '*'.' ';
+function printStar($n) {
+	for($i=1; $i<=$n; $i++) {
+		for($j=0; $j<$i; $j++) {
+			echo '*'.' ';
+		}
+		echo "\n";
 	}
-	echo "\n";
 }
+printStar(5);

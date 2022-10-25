@@ -2,13 +2,16 @@
 
 function arrayReverse($inputArr)
 {
-    $length = count($inputArr);
-    for ($i = 0; $i < $length / 2; $i++) {
+    $size = count($inputArr);
+    $lastIndex = $size - 1;
+    for ($i = 0; $i < $size / 2; $i++) {
         $temp = $inputArr[$i];
-        $inputArr[$i] = $inputArr[$length - $i - 1];
-        $inputArr[$length - $i - 1] = $temp;
+        $inputArr[$i] = $inputArr[$lastIndex];
+        $inputArr[$lastIndex] = $temp;
+        $lastIndex--;
     }
     return $inputArr;
 }
-$inputArr = [1, 2, 7, 6, 4, 9, 12];
-print_r(arrayReverse($inputArr));
+$inputArr = [1, 2, 3, 1, 2, 5, 6, 7];
+$resultArr = arrayReverse($inputArr);
+print_r($resultArr);
