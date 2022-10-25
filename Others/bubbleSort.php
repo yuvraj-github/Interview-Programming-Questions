@@ -1,3 +1,9 @@
+<!-- 
+
+ Time complexity: O(n²)
+ Space complexity: O(1)
+ -->
+
 <?php
 
 function bubbleSort($inputArr)
