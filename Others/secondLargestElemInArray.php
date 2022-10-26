@@ -1,20 +1,23 @@
 <?php
 
-function secondHeighestNumb($inputArr)
+function secondLargestElem($inputArr)
 {
     $size = count($inputArr);
-    $highest = $inputArr[0];
-    $secondHighest = $inputArr[0];
+    if ($size < 2) {
+        return 'Invalid Input';
+    }
+    $largest = $inputArr[0];
+    $secondLargest = $inputArr[0];
     for ($i = 1; $i < $size; $i++) {
-        if ($inputArr[$i] > $highest) {
-            $secondHighest = $highest;
-            $highest = $inputArr[$i];
-        } else if ($inputArr[$i] > $secondHighest) {
-            $secondHighest = $inputArr[$i];
+        if ($inputArr[$i] > $largest) {
+            $secondLargest = $largest;
+            $largest = $inputArr[$i];
+        } else if ($inputArr[$i] > $secondLargest && $inputArr[$i] != $largest) {
+            $secondLargest = $inputArr[$i];
         }
     }
-    return $secondHighest;
+    return $secondLargest;
 }
 
-$inputArr = [2, 1, 3, 4, 4, 6, 5];
-echo secondHeighestNumb($inputArr);
+$inputArr = [1, 8, 8, 4, 4, 4, 3, 5, 1];
+echo secondLargestElem($inputArr);

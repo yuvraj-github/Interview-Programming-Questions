@@ -1,13 +1,15 @@
 <?php
 
-function strReverse($str)
+function strReverseUsingRecur($str, $length)
 {
-    $length = strlen($str);
-    if ($length == 1) {
-        return $str;
+
+    if ($length == 0) {
+        return;
     }
-    $smallOutput =  strReverse(substr($str, 1, $length));
+    $smallOutput = strReverseUsingRecur(substr($str, 1, $length), $length - 1);
     return $smallOutput . substr($str, 0, 1);
 }
-$str = "Hello";
-echo strReverse($str);
+
+$str = 'nityaantt';
+$length = strlen($str);
+echo strReverseUsingRecur($str, $length);

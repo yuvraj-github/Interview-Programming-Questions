@@ -9,13 +9,18 @@ Output: Yuvraj is Name My
 
 function strReverse($str)
 {
-    $strExplode = explode(' ', $str);
-    $strReverse = '';
-    for ($i = count($strExplode) - 1; $i >= 0; $i--) {
-        $strReverse .= $strExplode[$i] . ' ';
+    $strArr = explode(' ', $str);
+    $size = count($strArr);
+    $lastElemIndex = $size - 1;
+
+    for ($i = 0; $i < $size / 2; $i++) {
+        $temp = $strArr[$i];
+        $strArr[$i] = $strArr[$lastElemIndex];
+        $strArr[$lastElemIndex] = $temp;
+        $lastElemIndex--;
     }
-    return $strReverse;
+    return implode(' ', $strArr);
 }
 
-$str = 'My Name is Yuvraj';
+$str = 'My name is Yuvraj Subh';
 echo strReverse($str);
