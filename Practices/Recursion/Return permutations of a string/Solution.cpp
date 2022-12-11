@@ -6,11 +6,9 @@ void generatePermutationsHelper(string &str, vector<string> &ans, string output)
 {
     if (str.length() == 0)
     {
-         ans.push_back(output);
-        // if (std::find(ans.begin(), ans.end(), output) == ans.end()) // check output exists in the vector.
-        // {
-        //     //output not exists.
-        //    ans.push_back(output);
+        ans.push_back(output);      
+        // if(!count(ans.begin(), ans.end(), output)) { //check output already exists in vector.
+        //     ans.push_back(output);
         // }
         return;
     }
