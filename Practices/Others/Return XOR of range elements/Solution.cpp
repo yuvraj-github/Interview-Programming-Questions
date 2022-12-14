@@ -1,3 +1,19 @@
+/**
+ * 
+ * Given two integers L and R, the task is to find the XOR of elements of the range [L, R]. 
+    Examples:
+
+    Input: L = 4, R = 8 
+    Output: 8 
+    4 ^ 5 ^ 6 ^ 7 ^ 8 = 8
+
+    Input: L = 3, R = 7 
+    Output: 3  
+ * 
+ * 
+*/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
