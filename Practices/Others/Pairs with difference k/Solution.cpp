@@ -5,7 +5,7 @@ using namespace std;
 int getPairsWithDifferenceK(int *arr, int n, int k)
 {
     unordered_map<int, int> m;
-    sort(arr, arr+n, greater<int>()); // sort array in descending order.
+    sort(arr, arr + n, greater<int>()); // sort array in descending order.
     int count = 0;
     for (int i = 0; i < n; i++)
     {
@@ -27,7 +27,7 @@ int main()
     {
         cin >> arr[i];
     }
-    cin>>k;
+    cin >> k;
     cout << getPairsWithDifferenceK(arr, n, k);
     delete[] arr;
 }
