@@ -14,7 +14,7 @@ int TotalPairs(vector<int> nums, int k)
         if (m[val] && m[val] > -1)
         {
             count++;
-            m[val] = -1; // set frequency of value -1 for distinct values.
+            m[val] = -1; // set frequency of value -1 for uniqueness.
         }
         if (!m[nums[i]]) // check already exists value.
         {
